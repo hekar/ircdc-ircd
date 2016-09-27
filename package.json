@@ -1,0 +1,45 @@
+{
+  "name": "ircdc-ircd",
+  "version": "1.0.0",
+  "description": "IRC portion of IRCDC",
+  "main": "index.js",
+  "dependencies": {
+    "amqp": "^0.2.6",
+    "co": "^4.6.0",
+    "irc": "git+ssh://git@github.com:hekar/node-irc.git#master",
+    "koa": "^1.2.4",
+    "koa-body": "^1.5.0",
+    "koa-bodyparser": "^2.2.0",
+    "koa-router": "^5.4.0",
+    "lodash": "^4.16.2",
+    "rc": "^1.1.6",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.6.1",
+    "mocha": "^2.4.5",
+    "shipit-cli": "^1.4.1",
+    "shipit-deploy": "^2.1.2"
+  },
+  "scripts": {
+    "start": "node ./lib/index.js",
+    "debug": "node debug ./lib/index.js",
+    "debug:watch": "nodemon --debug -e js ./lib/index.js",
+    "lint": "eslint .",
+    "test": "./node_modules/.bin/mocha -d -G test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hekar/ircdc-ircd.git"
+  },
+  "keywords": [
+    "irc",
+    "server"
+  ],
+  "bugs": {
+    "url": "https://github.com/hekar/ircdc/issues"
+  },
+  "homepage": "https://github.com/hekar/ircdc/#readme",
+  "author": "Hekar Khani",
+  "license": "MIT"
+}
